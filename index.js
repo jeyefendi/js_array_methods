@@ -40,7 +40,7 @@ const people = [
 //         return true
 //     }
 // })
-const adults = people.filter(person => person.age >= 18)
+// const adults = people.filter(person => person.age >= 18)
 
 // Reduce
 

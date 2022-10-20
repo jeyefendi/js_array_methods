@@ -24,6 +24,8 @@ for (let item of items) {
 
 ## ForEach
 
+* calls a function for each element in an array
+
 ```
 items.forEach(function(item) {
     console.log(item)
@@ -36,7 +38,10 @@ items.forEach(item => console.log(item))
 
 ## Map
 
-* method creates a new array populated with the results of calling a provided function on every element in the calling array
+* creates a new array from calling a function for every array element
+* calls a function once for each element in an array
+* dose not execute the function for empty elements
+* does not change the original array
 
 > Output every person's name
 ```
@@ -54,14 +59,21 @@ console.log(newPeople)
 
 ## Filter
 
-* method creates a shallow copy of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function
+* creates a new array filled with elements that pass a test provided by a function
+* dose not execute the function for empty elements
+* does not change the original array
 
-> Iterate array and give out all adults (over 18 years old)
+> Output all adults (over 18 years old)
 ```
 const adults = people.filter(person => person.age >= 18)
 ```
 
 ## Reduce
+
+* executes a reducer function for array element
+* returns a single value: the function's accumulated results
+* does not execute the function for empty array elements
+* dose not change the original array
 
 ## Find
 
