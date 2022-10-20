@@ -7,7 +7,7 @@
 * [Filter](#fifth)
 * [Reduce](#sixth)
 
-## for i, i++ {#first}
+## FOR i {#first}
 ```
 for (let i=0; i < [].length; i++) {
     console.log()
