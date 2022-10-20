@@ -24,11 +24,23 @@ const people = [
 // people.forEach(person => console.log(person))
 
 // Map
-const newPeople = people.map(person => `${person.name} (${person.age})`)
-console.log(newPeople)
+// const newPeople = people.map(person => `${person.name} (${person.age})`)
+// console.log(newPeople)
 
 // Filter
-
+// const adults = []
+// for (let i=0; i < people.length; i++) {
+//     if (people[i].age >= 18) {
+//         adults.push(people[i])
+//     }
+// }
+// console.log(adults)
+// const adults = people.filter(person => {
+//     if (person.age >= 18) {
+//         return true
+//     }
+// })
+const adults = people.filter(person => person.age >= 18)
 
 // Reduce
 

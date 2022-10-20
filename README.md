@@ -38,6 +38,7 @@ items.forEach(item => console.log(item))
 
 * method creates a new array populated with the results of calling a provided function on every element in the calling array
 
+> Output every person's name
 ```
 const newArray = items.map(item => {
     return item[0]
@@ -45,12 +46,20 @@ const newArray = items.map(item => {
 console.log(newArray)
 ```
 
+> Output every person's name and age
 ```
 const newPeople = people.map(person => `${person.name} (${person.age})`)
 console.log(newPeople)
 ```
 
 ## Filter
+
+* method creates a shallow copy of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function
+
+> Iterate array and give out all adults (over 18 years old)
+```
+const adults = people.filter(person => person.age >= 18)
+```
 
 ## Reduce
 
