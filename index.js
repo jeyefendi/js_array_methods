@@ -43,11 +43,26 @@ const people = [
 // const adults = people.filter(person => person.age >= 18)
 
 // Reduce
-
+// let amount = 0
+// for (let i=0; i < people.length; i++) {
+//     amount += people[i].budget
+// }
+// const amount = people.reduce((total, person) =>  total + person.budget, 0)
 
 // Find
-
+// const igor = people.find(person => person.name === 'Игорь')
 
 // FindIndex
+// const igorIndex = people.findIndex(person => person.name === 'Игорь')
 
+const amount = people
+.filter(person => person.budget > 3000)
+.map(person => {
+    return {
+        info: `${person.name} (${person.age})`,
+        budget: person.budget
+    }
+})
+.reduce((total, person) => total + person.budget, 0)
 
+console.log(amount)

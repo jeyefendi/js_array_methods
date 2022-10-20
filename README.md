@@ -6,6 +6,10 @@
 * [Map](#map)
 * [Filter](#filter)
 * [Reduce](#reduce)
+* [Find](#find)
+* [FindIndex](#findindex)
+
+> [CASE - Array methods combination](#case)
 
 ## FOR
 
@@ -48,13 +52,11 @@ items.forEach(item => console.log(item))
 const newArray = items.map(item => {
     return item[0]
 })
-console.log(newArray)
 ```
 
 > Output every person's name and age
 ```
 const newPeople = people.map(person => `${person.name} (${person.age})`)
-console.log(newPeople)
 ```
 
 ## Filter
@@ -75,6 +77,51 @@ const adults = people.filter(person => person.age >= 18)
 * does not execute the function for empty array elements
 * dose not change the original array
 
+> Output the sum of all budgets from the array
+```
+const amount = people.reduce((total, person) =>  total + person.budget, 0)
+```
+
 ## Find
 
+* returns the value of the first element that passes a test
+* executes a function for each array element
+* returns **undefined** if no elements are found
+* does not execute the function for empty array elements
+* dose not change the original array
+
+> Output the object with name 'Игорь'
+```
+const igor = people.find(person => person.name === 'Игорь')
+```
+
 ## FindIndex
+
+* returns the index (position) of the first element that passes a test
+* executes a function for each array element
+* returns **-1** if no match is found
+* does not execute the function for empty array elements
+* dose not change the original array
+
+> Output the index of object with name 'Игорь'
+```
+const igorIndex = people.findIndex(person => person.name === 'Игорь')
+```
+
+## CASE 
+
+1. Iterate persons whose budget is more than 3000
+2. Create a new array containing objects with info and budget values
+3. Output the sum of their budgets
+
+```
+const amount = people
+.filter(person => person.budget > 3000)
+.map(person => {
+    return {
+        info: `${person.name} (${person.age})`,
+        budget: person.budget
+    }
+})
+.reduce((total, person) => total + person.budget, 0)
+```
