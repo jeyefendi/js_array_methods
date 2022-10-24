@@ -20,7 +20,7 @@ for (let i=0; i < [].length; i++) {
 ```
 ## FOR-of
 
-```
+```javascript
 for (let item of items) {
     console.log(item)
 }
@@ -30,13 +30,13 @@ for (let item of items) {
 
 * calls a function for each element in an array
 
-```
+```javascript
 items.forEach(function(item) {
     console.log(item)
 })
 ```
 
-```
+```javascript
 items.forEach(item => console.log(item))
 ```
 
@@ -48,14 +48,14 @@ items.forEach(item => console.log(item))
 * does not change the original array
 
 > Output every person's name
-```
+```javascript
 const newArray = items.map(item => {
     return item[0]
 })
 ```
 
 > Output every person's name and age
-```
+```javascript
 const newPeople = people.map(person => `${person.name} (${person.age})`)
 ```
 
@@ -66,7 +66,7 @@ const newPeople = people.map(person => `${person.name} (${person.age})`)
 * does not change the original array
 
 > Output all adults (over 18 years old)
-```
+```javascript
 const adults = people.filter(person => person.age >= 18)
 ```
 
@@ -78,7 +78,7 @@ const adults = people.filter(person => person.age >= 18)
 * dose not change the original array
 
 > Output the sum of all budgets from the array
-```
+```javascript
 const amount = people.reduce((total, person) =>  total + person.budget, 0)
 ```
 
@@ -91,7 +91,7 @@ const amount = people.reduce((total, person) =>  total + person.budget, 0)
 * dose not change the original array
 
 > Output the object with name 'Игорь'
-```
+```javascript
 const igor = people.find(person => person.name === 'Игорь')
 ```
 
@@ -104,7 +104,7 @@ const igor = people.find(person => person.name === 'Игорь')
 * dose not change the original array
 
 > Output the index of object with name 'Игорь'
-```
+```javascript
 const igorIndex = people.findIndex(person => person.name === 'Игорь')
 ```
 
@@ -114,7 +114,7 @@ const igorIndex = people.findIndex(person => person.name === 'Игорь')
 2. Create a new array containing objects with info and budget values
 3. Output the sum of their budgets
 
-```
+```javascript
 const amount = people
 .filter(person => person.budget > 3000)
 .map(person => {
